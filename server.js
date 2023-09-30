@@ -13,6 +13,9 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 app.get('/', function (req, res) {
     res.send("<h1>Home Page</h1>")
 })
+app.get('/name', function (req, res) {
+  res.send("<h1>Ankush Tripathi</h1>")
+})
 
 //http://localhost:3000/profile
 app.post('/profile', (req, res) => {
