@@ -11,8 +11,17 @@ app.use(express.urlencoded({ extended: true })) // for parsing application/x-www
 
 //http://localhost:3000/
 app.get('/', function (req, res) {
-    res.send("<h1>Home Page</h1>")
-})
+  const htmlContent = `
+      <h1>Index Page</h1>
+      <a href="http://localhost:3000/name">Name Page</a><br>
+      <a href="http://localhost:3000/profile">Profile</a><br>
+      <a href="http://localhost:3000/admin">Admin Page</a><br>
+      <a href="http://localhost:3000/user/100">User ID</a><br>
+      <a href="https://github.com/Ankush0o7/node_express_github_actions.git">My Repository</a>
+  `;
+  res.send(htmlContent);
+});
+
 app.get('/name', function (req, res) {
   res.send("<h1>Ankush Tripathi</h1>")
 })
